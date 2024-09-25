@@ -1,6 +1,7 @@
 export const titleLong = 'template.inte - 前端 Web 通用模板';
 export const titleShort = 'template.inte';
 
+export const isHomeEnabled = true;
 export const isSaraEnabled = true;
 
 export const menuItems = [

@@ -23,6 +23,7 @@
               <app-header-mobile-menu-dropdown :name="item.name" :children="item.children" v-if="item.type === 'dropdown'" />
               <app-header-mobile-menu-item :name="item.name" :icon="item.icon" @click="handleItemClick(item)" v-else />
             </div>
+            <app-header-mobile-menu-home v-if="isHomeEnabled" />
             <app-header-mobile-menu-sara v-if="isSaraEnabled" />
           </nav>
         </div>
@@ -38,9 +39,15 @@ import { XMarkIcon } from "@heroicons/vue/24/solid"
 
 import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue"
 import AppHeaderMobileMenuDropdown from "./AppHeaderMobileMenuDropdown.vue"
+import AppHeaderMobileMenuHome from "./AppHeaderMobileMenuHome.vue"
 import AppHeaderMobileMenuSara from "./AppHeaderMobileMenuSara.vue"
 
-import { titleShort, isSaraEnabled, menuItems } from "./AppHeaderMenuData.js";
+import {
+  titleShort,
+  isHomeEnabled,
+  isSaraEnabled,
+  menuItems,
+} from "./AppHeaderMenuData.js";
 
 const emit = defineEmits(["close"]);
 
