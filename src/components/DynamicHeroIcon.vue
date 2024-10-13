@@ -1,5 +1,8 @@
 <template>
-  <component :is="iconInstance" v-bind="props" />
+  <component
+    :is="iconInstance"
+    v-bind="props"
+  />
 </template>
 
 <script setup>

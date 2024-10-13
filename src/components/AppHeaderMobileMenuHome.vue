@@ -1,5 +1,9 @@
 <template>
-    <app-header-mobile-menu-item name="回首頁" icon="HomeIcon" @click="handleClick" />
+  <app-header-mobile-menu-item
+    name="回首頁"
+    icon="HomeIcon"
+    @click="handleClick"
+  />
 </template>
 
 <script setup>

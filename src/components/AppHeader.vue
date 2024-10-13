@@ -13,12 +13,18 @@
           </router-link>
         </div>
         <app-header-normal />
-        <app-header-mobile-icon-button class="-mr-2 -my-2 md:hidden" @click="handleMobileMenuBtnOpenClick">
+        <app-header-mobile-icon-button
+          class="-mr-2 -my-2 md:hidden"
+          @click="handleMobileMenuBtnOpenClick"
+        >
           <bars4-icon class="h-6 w-6" />
         </app-header-mobile-icon-button>
       </div>
     </div>
-    <app-header-mobile v-show="isMobileMenuOpened" @close="handleMobileMenuBtnCloseClick" />
+    <app-header-mobile
+      v-show="isMobileMenuOpened"
+      @close="handleMobileMenuBtnCloseClick"
+    />
   </div>
 </template>
 

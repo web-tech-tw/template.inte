@@ -1,7 +1,18 @@
 <template>
-    <app-header-normal-menu-item name="載入中..." v-if="loginState === null" />
-    <app-header-normal-menu-item name="登入" @click="handleClick" v-else-if="loginState === false" />
-    <app-header-normal-menu-item :name="nickname" @click="handleClick" v-else />
+  <app-header-normal-menu-item
+    v-if="loginState === null"
+    name="載入中..."
+  />
+  <app-header-normal-menu-item
+    v-else-if="loginState === false"
+    name="登入"
+    @click="handleClick"
+  />
+  <app-header-normal-menu-item
+    v-else
+    :name="nickname"
+    @click="handleClick"
+  />
 </template>
 
 <script setup>

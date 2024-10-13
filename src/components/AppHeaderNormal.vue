@@ -1,8 +1,19 @@
 <template>
   <nav class="md:flex space-x-10 hidden">
-    <div v-for="(item, index) in menuItems" :key="index">
-      <app-header-normal-menu-dropdown :name="item.name" :children="item.children" v-if="item.type === 'dropdown'" />
-      <app-header-normal-menu-item :name="item.name" @click="handleItemClick(item)" v-else />
+    <div
+      v-for="(item, index) in menuItems"
+      :key="index"
+    >
+      <app-header-normal-menu-dropdown
+        v-if="item.type === 'dropdown'"
+        :name="item.name"
+        :children="item.children"
+      />
+      <app-header-normal-menu-item
+        v-else
+        :name="item.name"
+        @click="handleItemClick(item)"
+      />
     </div>
     <app-header-normal-menu-home v-if="isHomeEnabled" />
     <app-header-normal-menu-sara v-if="isSaraEnabled" />

@@ -1,5 +1,8 @@
 <template>
-    <app-header-normal-menu-item name="回首頁" @click="handleClick" />
+  <app-header-normal-menu-item
+    name="回首頁"
+    @click="handleClick"
+  />
 </template>
 
 <script setup>

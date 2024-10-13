@@ -4,11 +4,17 @@
       「template.inte」是前端 Web 通用模板，請自行修改內容。
     </div>
     <div class="max-w-7xl mx-auto mt-5 divide-y divide-gray-200 px-4 sm:px-6 md:px-8 text-sky-700">
-      <a class="mr-3" href="https://github.com/web-tech-tw/template.inte">網站原始碼</a>
-      <a class="mr-3" href="https://web-tech.tw/#/privacy">隱私權政策</a>
+      <a
+        class="mr-3"
+        href="https://github.com/web-tech-tw/template.inte"
+      >網站原始碼</a>
+      <a
+        class="mr-3"
+        href="https://web-tech.tw/#/privacy"
+      >隱私權政策</a>
     </div>
     <div class="max-w-7xl mx-auto mt-5 divide-y divide-gray-200 px-4 sm:px-6 md:px-8">
-      &copy; {{year}} 臺灣網際網路技術推廣組織 Taiwan Web Technology Promotion Organization (Web Tech TW)
+      &copy; {{ year }} 臺灣網際網路技術推廣組織 Taiwan Web Technology Promotion Organization (Web Tech TW)
     </div>
   </footer>
 </template>

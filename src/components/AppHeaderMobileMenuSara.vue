@@ -1,8 +1,21 @@
 <template>
-    <app-header-mobile-menu-item name="載入中..." icon="ArrowPathIcon" v-if="loginState === null" />
-    <app-header-mobile-menu-item name="登入" icon="ArrowRightOnRectangleIcon" @click="handleClick"
-        v-else-if="loginState === false" />
-    <app-header-mobile-menu-item :name="nickname" icon="UserIcon" @click="handleClick" v-else />
+  <app-header-mobile-menu-item
+    v-if="loginState === null"
+    name="載入中..."
+    icon="ArrowPathIcon"
+  />
+  <app-header-mobile-menu-item
+    v-else-if="loginState === false"
+    name="登入"
+    icon="ArrowRightOnRectangleIcon"
+    @click="handleClick"
+  />
+  <app-header-mobile-menu-item
+    v-else
+    :name="nickname"
+    icon="UserIcon"
+    @click="handleClick"
+  />
 </template>
 
 <script setup>

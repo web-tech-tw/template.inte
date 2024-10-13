@@ -1,6 +1,9 @@
 <template>
   <div class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 cursor-pointer">
-    <dynamic-hero-icon :name="props.icon" class="rounded-full w-6 h-6" />
+    <dynamic-hero-icon
+      :name="props.icon"
+      class="rounded-full w-6 h-6"
+    />
     <div class="ml-4">
       <p class="text-base font-medium text-gray-900">
         {{ props.name }}
@@ -18,15 +21,15 @@ import DynamicHeroIcon from "./DynamicHeroIcon.vue"
 const props = defineProps({
   name: {
     type: String,
-    require: true,
+    required: true,
   },
   description: {
     type: String,
-    require: true,
+    required: true,
   },
   icon: {
     type: String,
-    require: true,
+    required: true,
   }
 });
 </script>

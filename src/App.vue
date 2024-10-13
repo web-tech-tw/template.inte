@@ -1,8 +1,8 @@
 <template>
   <div class="relative bg-white">
-    <app-header/>
-    <router-view/>
-    <app-footer/>
+    <app-header />
+    <router-view />
+    <app-footer />
   </div>
 </template>
 
