@@ -17,16 +17,16 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
-    "ky": "^1.0.1",
+    "jwt-decode": "^4.0.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
-    "cz-conventional-changelog": "^3.3.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.15",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.12.0",
     "eslint-plugin-vue": "^9.29.0",
     "husky": "^8.0.3",
