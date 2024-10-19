@@ -36,11 +36,11 @@ import { ref, inject, watch } from "vue";
 
 import { ChevronDownIcon } from "@heroicons/vue/24/solid"
 
-import AppHeaderMobileMenuDropdownItem from './AppHeaderMobileMenuDropdownItem.vue';
+import AppHeaderMobileMenuDropdownItem from "./AppHeaderMobileMenuDropdownItem.vue";
 
 const isDropdownOpened = ref(false);
 
-const parentMenuState = inject('parent-menu-state')
+const parentMenuState = inject("parent-menu-state")
 watch(parentMenuState, (value) => {
   if (!value) {
     isDropdownOpened.value = false;

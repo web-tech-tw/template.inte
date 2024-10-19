@@ -34,7 +34,7 @@ import {
   menuItems,
 } from "./AppHeaderMenuData.js";
 
-const parentMenuState = inject('parent-menu-state');
+const parentMenuState = inject("parent-menu-state");
 
 const handleItemClick = (item) => {
   parentMenuState.value = false;

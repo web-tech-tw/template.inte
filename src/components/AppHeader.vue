@@ -43,7 +43,7 @@ import AppHeaderMobileIconButton from "./AppHeaderMobileIconButton.vue";
 const isMobileMenuOpened = ref(false);
 
 const parentMenuState = ref(true);
-provide('parent-menu-state', parentMenuState);
+provide("parent-menu-state", parentMenuState);
 
 const handleMobileMenuBtnOpenClick = () => {
   isMobileMenuOpened.value = true;
@@ -56,16 +56,16 @@ const handleMobileMenuBtnCloseClick = () => {
 }
 
 const handleDocumentClick = (e) => {
-  if (!document.querySelector('.app-header').contains(e.target)) {
+  if (!document.querySelector(".app-header").contains(e.target)) {
     parentMenuState.value = false;
   }
 };
 
 onMounted(() => {
-  document.addEventListener('click', handleDocumentClick);
+  document.addEventListener("click", handleDocumentClick);
 });
 
 onUnmounted(() => {
-  document.removeEventListener('click', handleDocumentClick);
+  document.removeEventListener("click", handleDocumentClick);
 });
 </script>
