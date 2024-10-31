@@ -21,7 +21,7 @@ import { watch } from "vue";
 
 import {
   InformationCircleIcon,
-} from "@heroicons/vue/24/solid";
+} from "@heroicons/vue/24/outline";
 
 let timer;
 

@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import * as allIcons from "@heroicons/vue/24/solid";
+import * as allIcons from "@heroicons/vue/24/outline";
 
 const props = defineProps({
   name: {

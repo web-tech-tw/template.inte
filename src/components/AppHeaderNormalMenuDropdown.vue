@@ -34,7 +34,7 @@
 <script setup>
 import { ref, inject, watch } from "vue";
 
-import { ChevronDownIcon } from "@heroicons/vue/24/solid"
+import { ChevronDownIcon } from "@heroicons/vue/24/outline"
 
 import AppHeaderNormalMenuDropdownItem from "./AppHeaderNormalMenuDropdownItem.vue";
 

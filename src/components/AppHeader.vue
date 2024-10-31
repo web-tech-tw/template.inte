@@ -32,7 +32,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, provide } from "vue";
 
-import { Bars4Icon } from "@heroicons/vue/24/solid"
+import { Bars4Icon } from "@heroicons/vue/24/outline"
 
 import {
   title,
