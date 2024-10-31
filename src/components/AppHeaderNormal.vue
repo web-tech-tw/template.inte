@@ -27,7 +27,6 @@ import AppHeaderNormalMenuDropdown from "./AppHeaderNormalMenuDropdown.vue"
 import AppHeaderNormalMenuSara from "./AppHeaderNormalMenuSara.vue"
 
 import {
-  isHomeEnabled,
   isSaraEnabled,
   menuItems,
 } from "./AppHeaderMenuData.js";

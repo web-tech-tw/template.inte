@@ -4,12 +4,12 @@
       <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <router-link to="/">
-            <h1 class="flex-auto text-lg font-semibold text-gray-900 hidden sm:block">
-              {{ titleLong }}
+            <h1 class="flex-auto text-lg font-semibold text-gray-900">
+              {{ title }}
             </h1>
-            <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
-              {{ titleShort }}
-            </h1>
+            <p class="flex-auto text-sm font-normal text-gray-500">
+              {{ subtitle }}
+            </p>
           </router-link>
         </div>
         <app-header-normal />
@@ -33,7 +33,7 @@ import { ref, onMounted, onUnmounted, provide } from "vue";
 
 import { Bars4Icon } from "@heroicons/vue/24/solid"
 
-import { titleLong, titleShort } from "./AppHeaderMenuData.js";
+import { title, subtitle } from "./AppHeaderMenuData.js";
 
 import AppHeaderNormal from "./AppHeaderNormal.vue";
 import AppHeaderMobile from "./AppHeaderMobile.vue";

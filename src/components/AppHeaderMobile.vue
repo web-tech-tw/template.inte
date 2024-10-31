@@ -8,7 +8,7 @@
         >
           <div>
             <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
-              {{ titleShort }}
+              {{ title }}
             </h1>
           </div>
           <div class="-mr-2">
@@ -57,8 +57,7 @@ import AppHeaderMobileMenuDropdown from "./AppHeaderMobileMenuDropdown.vue"
 import AppHeaderMobileMenuSara from "./AppHeaderMobileMenuSara.vue"
 
 import {
-  titleShort,
-  isHomeEnabled,
+  title,
   isSaraEnabled,
   menuItems,
 } from "./AppHeaderMenuData.js";
