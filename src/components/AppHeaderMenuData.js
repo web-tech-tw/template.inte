@@ -2,6 +2,12 @@ export const title = "template.inte";
 export const subtitle = "前端 Web 通用模板";
 
 export const isSaraEnabled = true;
+export const onClickSara = () => {
+  const {
+    VITE_SARA_INTE_HOST: saraInteHost,
+  } = import.meta.env;
+  location.assign(saraInteHost);
+};
 
 export const menuItems = [
   {
