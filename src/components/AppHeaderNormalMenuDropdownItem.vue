@@ -1,18 +1,23 @@
 <template>
-  <div class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 cursor-pointer">
+  <button
+    class="-m-3 p-3 flex w-full items-center rounded-md text-gray-900 hover:text-gray-700"
+    type="button"
+  >
     <dynamic-hero-icon
+      v-if="props.icon"
       :name="props.icon"
       class="rounded-full w-6 h-6"
     />
-    <div class="ml-4">
-      <p class="text-base font-medium text-gray-900">
+    <slot name="prepend" />
+    <div class="text-left ml-4">
+      <div class="text-base font-medium">
         {{ props.name }}
-      </p>
-      <p class="mt-1 text-sm text-gray-500">
+      </div>
+      <div class="mt-1 text-sm">
         {{ props.description }}
-      </p>
+      </div>
     </div>
-  </div>
+  </button>
 </template>
 
 <script setup>
@@ -29,7 +34,8 @@ const props = defineProps({
   },
   icon: {
     type: String,
-    required: true,
-  }
+    required: false,
+    default: () => "",
+  },
 });
 </script>
