@@ -8,7 +8,6 @@
   <app-header-mobile-menu-item
     v-else
     :name="nickname"
-    :logo="avatarUrl"
     @click="onClick"
   >
     <template #prepend>
