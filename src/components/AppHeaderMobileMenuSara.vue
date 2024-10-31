@@ -27,7 +27,7 @@ const profile = useProfile();
 const nickname = computed(() => {
     const { nickname } = profile;
     return nickname;
-})
+});
 
 const handleClick = () => {
   onClickSara(profile);

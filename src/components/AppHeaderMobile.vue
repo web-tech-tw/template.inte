@@ -64,7 +64,7 @@ import {
 
 const emit = defineEmits(["close"]);
 
-const parentMenuState = inject("parent-menu-state")
+const parentMenuState = inject("parent-menu-state");
 watch(parentMenuState, (value) => {
   if (!value) {
     emit("close");

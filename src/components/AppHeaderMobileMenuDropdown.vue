@@ -40,7 +40,7 @@ import AppHeaderMobileMenuDropdownItem from "./AppHeaderMobileMenuDropdownItem.v
 
 const isDropdownOpened = ref(false);
 
-const parentMenuState = inject("parent-menu-state")
+const parentMenuState = inject("parent-menu-state");
 watch(parentMenuState, (value) => {
   if (!value) {
     isDropdownOpened.value = false;

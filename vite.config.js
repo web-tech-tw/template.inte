@@ -1,5 +1,5 @@
-import { defineConfig } from "vite"
-import vue from "@vitejs/plugin-vue"
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
 const base = process.env.BASE_URL || "/";
 
@@ -7,4 +7,4 @@ const base = process.env.BASE_URL || "/";
 export default defineConfig({
   base,
   plugins: [vue()],
-})
+});
