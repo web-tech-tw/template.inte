@@ -15,7 +15,7 @@
       <img
         :src="identicon"
         :alt="nickname"
-        class="rounded-full w-6 h-6"
+        class="rounded-full w-6 h-6 mr-4"
       >
     </template>
   </app-header-mobile-menu-item>

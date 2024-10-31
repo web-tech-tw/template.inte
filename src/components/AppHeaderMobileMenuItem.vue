@@ -6,10 +6,10 @@
     <dynamic-hero-icon
       v-if="props.icon"
       :name="props.icon"
-      class="rounded-full w-6 h-6"
+      class="rounded-full w-6 h-6 mr-4"
     />
     <slot name="prepend" />
-    <div class="text-left ml-4">
+    <div class="text-left">
       <div class="text-base font-medium">
         {{ props.name }}
       </div>
