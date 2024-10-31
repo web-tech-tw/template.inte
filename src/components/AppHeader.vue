@@ -14,6 +14,7 @@
         </div>
         <app-header-normal />
         <app-header-mobile-icon-button
+          v-if="isMenuItemExist"
           class="-mr-2 -my-2 md:hidden"
           @click="handleMobileMenuBtnOpenClick"
         >
@@ -29,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, provide } from "vue";
+import { ref, computed, onMounted, onUnmounted, provide } from "vue";
 
 import { Bars4Icon } from "@heroicons/vue/24/solid"
 
@@ -44,6 +45,10 @@ const isMobileMenuOpened = ref(false);
 
 const parentMenuState = ref(true);
 provide("parent-menu-state", parentMenuState);
+
+const isMenuItemExist = computed(() => {
+  return isSaraEnabled || isHomeEnabled || menuItems.length;
+});
 
 const handleMobileMenuBtnOpenClick = () => {
   isMobileMenuOpened.value = true;
