@@ -4,10 +4,14 @@
     type="button"
   >
     <dynamic-hero-icon
+      v-if="props.icon"
       :name="props.icon"
       class="rounded-full w-6 h-6"
     />
-    <span class="ml-3 text-base font-medium text-gray-900">{{ props.name }}</span>
+    <slot name="prepend" />
+    <span class="ml-3 text-base font-medium text-gray-900">
+      {{ props.name }}
+    </span>
   </button>
 </template>
 
@@ -21,7 +25,8 @@ const props = defineProps({
   },
   icon: {
     type: String,
-    required: true,
+    required: false,
+    default: () => "",
   },
 });
 </script>

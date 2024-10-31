@@ -8,9 +8,17 @@
   <app-header-mobile-menu-item
     v-else
     :name="nickname"
-    icon="UserIcon"
+    :logo="avatarUrl"
     @click="handleClick"
-  />
+  >
+    <template #prepend>
+      <img
+        :src="identicon"
+        :alt="nickname"
+        class="rounded-full w-6 h-6"
+      >
+    </template>
+  </app-header-mobile-menu-item>
 </template>
 
 <script setup>
@@ -27,6 +35,11 @@ const profile = useProfile();
 const nickname = computed(() => {
     const { nickname } = profile;
     return nickname;
+});
+
+const identicon = computed(() => {
+    const {avatar_hash: avatarHash} = profile;
+    return `https://api.gravatar.com/avatar/${avatarHash}?d=identicon`;
 });
 
 const handleClick = () => {
