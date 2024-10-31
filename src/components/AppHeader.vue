@@ -34,7 +34,12 @@ import { ref, computed, onMounted, onUnmounted, provide } from "vue";
 
 import { Bars4Icon } from "@heroicons/vue/24/solid"
 
-import { title, subtitle, isSaraEnabled } from "./AppHeaderMenuData.js";
+import {
+  title,
+  subtitle,
+  isSaraEnabled,
+  menuItems,
+} from "./AppHeaderMenuData.js";
 
 import AppHeaderNormal from "./AppHeaderNormal.vue";
 import AppHeaderMobile from "./AppHeaderMobile.vue";
