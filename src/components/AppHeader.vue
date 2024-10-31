@@ -34,7 +34,7 @@ import { ref, computed, onMounted, onUnmounted, provide } from "vue";
 
 import { Bars4Icon } from "@heroicons/vue/24/solid"
 
-import { title, subtitle } from "./AppHeaderMenuData.js";
+import { title, subtitle, isSaraEnabled } from "./AppHeaderMenuData.js";
 
 import AppHeaderNormal from "./AppHeaderNormal.vue";
 import AppHeaderMobile from "./AppHeaderMobile.vue";
@@ -47,7 +47,7 @@ const parentMenuState = ref(true);
 provide("parent-menu-state", parentMenuState);
 
 const isMenuItemExist = computed(() => {
-  return isSaraEnabled || isHomeEnabled || menuItems.length;
+  return isSaraEnabled || menuItems.length;
 });
 
 const handleMobileMenuBtnOpenClick = () => {
