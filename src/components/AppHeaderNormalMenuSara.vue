@@ -8,7 +8,15 @@
     v-else
     :name="nickname"
     @click="handleClick"
-  />
+  >
+    <template #prepend>
+      <img
+        :src="identicon"
+        :alt="nickname"
+        class="rounded-full w-8 h-8 mr-2"
+      >
+    </template>
+  </app-header-normal-menu-item>
 </template>
 
 <script setup>
@@ -25,6 +33,11 @@ const profile = useProfile();
 const nickname = computed(() => {
     const { nickname } = profile;
     return nickname;
+});
+
+const identicon = computed(() => {
+    const {avatar_hash: avatarHash} = profile;
+    return `https://api.gravatar.com/avatar/${avatarHash}?d=identicon`;
 });
 
 const handleClick = () => {
