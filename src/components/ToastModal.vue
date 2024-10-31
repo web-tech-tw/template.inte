@@ -3,7 +3,7 @@
     v-show="model"
     type="button"
     class="fixed right-2 lg:right-24 top-24 z-50 rounded-md px-4 py-2 text-white transition bg-amber-500 hover:bg-amber-600 animate-fade"
-    @click="handleClickClose"
+    @click="onClickClose"
   >
     <div class="flex items-center space-x-2">
       <span>
@@ -29,7 +29,7 @@ const model = defineModel({
   type: String,
 });
 
-const handleClickClose = () => {
+const onClickClose = () => {
   if (timer) {
     clearTimeout(timer);
   }
@@ -38,6 +38,6 @@ const handleClickClose = () => {
 
 watch(model, () => {
   if (!model.value) return;
-  timer = setTimeout(handleClickClose, 3000);
+  timer = setTimeout(onClickClose, 3000);
 });
 </script>

@@ -4,7 +4,7 @@
       aria-expanded="false"
       class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
       type="button"
-      @click="handleDropdownClick"
+      @click="onClickDropdown"
     >
       <span>{{ props.name }}</span>
       <chevron-down-icon class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" />
@@ -23,7 +23,7 @@
             :name="child.name"
             :description="child.description"
             :icon="child.icon"
-            @click="handleItemClick(child)"
+            @click="onClickItem(child)"
           />
         </div>
       </div>
@@ -47,14 +47,14 @@ watch(parentMenuState, (value) => {
   }
 });
 
-const handleDropdownClick = () => {
+const onClickDropdown = () => {
   isDropdownOpened.value = !isDropdownOpened.value;
   if (isDropdownOpened.value) {
     parentMenuState.value = true;
   }
 };
 
-const handleItemClick = (item) => {
+const onClickItem = (item) => {
   parentMenuState.value = false;
   item.onClick();
 }

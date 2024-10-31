@@ -12,7 +12,7 @@
       <app-header-normal-menu-item
         v-else
         :name="item.name"
-        @click="handleItemClick(item)"
+        @click="onClickItem(item)"
       />
     </div>
     <app-header-normal-menu-sara v-if="isSaraEnabled" />
@@ -33,7 +33,7 @@ import {
 
 const parentMenuState = inject("parent-menu-state");
 
-const handleItemClick = (item) => {
+const onClickItem = (item) => {
   parentMenuState.value = false;
   item.onClick();
 }

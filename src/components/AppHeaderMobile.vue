@@ -4,7 +4,7 @@
       <div class="pt-5 pb-6 px-5">
         <div
           class="flex items-center justify-between"
-          @click="handleMobileMenuCloseClick"
+          @click="onClickMobileMenuClose"
         >
           <div>
             <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
@@ -36,7 +36,7 @@
                 v-else
                 :name="item.name"
                 :icon="item.icon"
-                @click="handleItemClick(item)"
+                @click="onClickItem(item)"
               />
             </div>
             <app-header-mobile-menu-sara v-if="isSaraEnabled" />
@@ -71,11 +71,11 @@ watch(parentMenuState, (value) => {
   }
 });
 
-const handleMobileMenuCloseClick = () => {
+const onClickMobileMenuClose = () => {
   emit("close");
 }
 
-const handleItemClick = (item) => {
+const onClickItem = (item) => {
   parentMenuState.value = false;
   item.onClick();
 }
