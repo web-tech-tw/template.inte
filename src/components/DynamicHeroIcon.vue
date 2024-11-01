@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="iconInstance"
+    :is="resource"
     v-bind="props"
   />
 </template>
@@ -20,5 +20,5 @@ const props = defineProps({
   },
 });
 
-const iconInstance = allIcons[props.name];
+const resource = allIcons[props.name];
 </script>
