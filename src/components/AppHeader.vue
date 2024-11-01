@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, provide } from "vue";
+import { ref, onMounted, onUnmounted, provide } from "vue";
 
 import { Bars4Icon } from "@heroicons/vue/24/outline"
 
@@ -51,9 +51,7 @@ const isMobileMenuOpened = ref(false);
 const parentMenuState = ref(true);
 provide("parent-menu-state", parentMenuState);
 
-const isMenuItemExist = computed(() => {
-  return isSaraEnabled || menuItems.length;
-});
+const isMenuItemExist = isSaraEnabled || menuItems.length;
 
 const onClickMobileMenuBtnOpen = () => {
   isMobileMenuOpened.value = true;
