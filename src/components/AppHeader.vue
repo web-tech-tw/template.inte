@@ -7,7 +7,7 @@
             <h1 class="flex-auto text-lg font-semibold text-gray-900">
               {{ title }}
             </h1>
-            <p class="flex-auto text-sm font-normal text-gray-500">
+            <p class="flex-auto text-md font-normal text-gray-500">
               {{ subtitle }}
             </p>
           </router-link>
