@@ -6,8 +6,9 @@ export const title = "template.inte";
 export const subtitle = "前端 Web 通用模板";
 
 export const isSaraEnabled = true;
-export const onClickSara = () => {
-  redirectLogin();
+export const onClickSara = (profile) => {
+  const isLoggedIn = !!profile;
+  redirectLogin(!isLoggedIn);
 };
 
 export const menuItems = [
