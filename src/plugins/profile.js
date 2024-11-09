@@ -25,13 +25,21 @@ export const useProfile = () => {
     }
 };
 
-export const redirectLogin = (isWithRefer=false) => {
+export const redirectLogin = (isWithRefer = false) => {
     if (!isWithRefer) {
         location.assign(saraInteHost);
         return;
     }
 
-    const {href: refer} = location;
-    const params = new URLSearchParams({refer});
+    const { href: refer } = location;
+    const params = new URLSearchParams({ refer });
     location.assign(`${saraInteHost}/?${params}`);
+};
+
+export const isAllowed = (profile, roleName) => {
+    const roles = profile?.roles;
+    if (!Array.isArray(roles)) {
+        return false;
+    }
+    return roles.includes(roleName);
 };
