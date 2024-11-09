@@ -1,6 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 
 const {
+    VITE_SARA_INTE_HOST: saraInteHost,
     VITE_SARA_TOKEN_NAME: saraTokenName,
 } = import.meta.env;
 
@@ -22,4 +23,15 @@ export const useProfile = () => {
         location.reload();
         return null;
     }
+};
+
+export const redirectLogin = (isWithRefer=false) => {
+    if (!isWithRefer) {
+        location.assign(saraInteHost);
+        return;
+    }
+
+    const {href: refer} = location;
+    const params = new URLSearchParams({refer});
+    location.assign(`${saraInteHost}/?${params}`);
 };
