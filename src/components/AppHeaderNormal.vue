@@ -20,11 +20,11 @@
 </template>
 
 <script setup>
-import { inject } from "vue";
+import {inject} from "vue";
 
-import AppHeaderNormalMenuItem from "./AppHeaderNormalMenuItem.vue"
-import AppHeaderNormalMenuDropdown from "./AppHeaderNormalMenuDropdown.vue"
-import AppHeaderNormalMenuSara from "./AppHeaderNormalMenuSara.vue"
+import AppHeaderNormalMenuItem from "./AppHeaderNormalMenuItem.vue";
+import AppHeaderNormalMenuDropdown from "./AppHeaderNormalMenuDropdown.vue";
+import AppHeaderNormalMenuSara from "./AppHeaderNormalMenuSara.vue";
 
 import {
   isSaraEnabled,
@@ -36,5 +36,5 @@ const parentMenuState = inject("parent-menu-state");
 const onClickItem = (item) => {
   parentMenuState.value = false;
   item.onClick();
-}
+};
 </script>

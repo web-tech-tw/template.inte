@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { watch } from "vue";
+import {watch} from "vue";
 
 import {
   InformationCircleIcon,
@@ -34,7 +34,7 @@ const onClickClose = () => {
     clearTimeout(timer);
   }
   model.value = "";
-}
+};
 
 watch(model, () => {
   if (!model.value) return;

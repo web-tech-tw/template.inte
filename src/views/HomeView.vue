@@ -61,7 +61,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import {ref} from "vue";
 
 import LoadingCircleIcon from "../components/LoadingCircleIcon.vue";
 import ToastModal from "../components/ToastModal.vue";

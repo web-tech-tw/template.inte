@@ -48,13 +48,13 @@
 </template>
 
 <script setup>
-import { inject, watch } from "vue";
+import {inject, watch} from "vue";
 
-import { XMarkIcon } from "@heroicons/vue/24/outline"
+import {XMarkIcon} from "@heroicons/vue/24/outline";
 
-import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue"
-import AppHeaderMobileMenuDropdown from "./AppHeaderMobileMenuDropdown.vue"
-import AppHeaderMobileMenuSara from "./AppHeaderMobileMenuSara.vue"
+import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue";
+import AppHeaderMobileMenuDropdown from "./AppHeaderMobileMenuDropdown.vue";
+import AppHeaderMobileMenuSara from "./AppHeaderMobileMenuSara.vue";
 
 import {
   title,
@@ -73,10 +73,10 @@ watch(parentMenuState, (value) => {
 
 const onClickMobileMenuClose = () => {
   emit("close");
-}
+};
 
 const onClickItem = (item) => {
   parentMenuState.value = false;
   item.onClick();
-}
+};
 </script>

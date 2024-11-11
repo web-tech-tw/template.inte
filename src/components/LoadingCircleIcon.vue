@@ -23,10 +23,10 @@
 
 <script setup>
 const props = defineProps({
-    class: {
-        type: String,
-        required: false,
-        default: () => "",
-    }
+  class: {
+    type: String,
+    required: false,
+    default: () => "",
+  },
 });
 </script>

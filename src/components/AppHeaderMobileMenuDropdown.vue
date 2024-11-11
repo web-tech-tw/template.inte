@@ -32,9 +32,9 @@
 </template>
 
 <script setup>
-import { ref, inject, watch } from "vue";
+import {ref, inject, watch} from "vue";
 
-import { ChevronDownIcon } from "@heroicons/vue/24/outline"
+import {ChevronDownIcon} from "@heroicons/vue/24/outline";
 
 import AppHeaderMobileMenuDropdownItem from "./AppHeaderMobileMenuDropdownItem.vue";
 
@@ -57,7 +57,7 @@ const onClickDropdown = () => {
 const onClickItem = (item) => {
   parentMenuState.value = false;
   item.onClick();
-}
+};
 
 const props = defineProps({
   name: {
@@ -67,6 +67,6 @@ const props = defineProps({
   children: {
     type: Array,
     required: true,
-  }
+  },
 });
 </script>

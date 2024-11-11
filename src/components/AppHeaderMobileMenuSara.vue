@@ -21,24 +21,24 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import {computed} from "vue";
 
 import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue";
 
-import { onClickSara } from "./AppHeaderMenuData.js";
+import {onClickSara} from "./AppHeaderMenuData.js";
 
-import { useProfile } from "../plugins/profile.js";
+import {useProfile} from "../plugins/profile.js";
 
 const profile = useProfile();
 
 const nickname = computed(() => {
-    const { nickname } = profile;
-    return nickname;
+  const {nickname} = profile;
+  return nickname;
 });
 
 const identicon = computed(() => {
-    const {avatar_hash: avatarHash} = profile;
-    return `https://api.gravatar.com/avatar/${avatarHash}?d=identicon`;
+  const {avatar_hash: avatarHash} = profile;
+  return `https://api.gravatar.com/avatar/${avatarHash}?d=identicon`;
 });
 
 const onClick = () => {
