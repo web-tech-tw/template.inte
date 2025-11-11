@@ -1,18 +1,18 @@
 # Wings
 
-一個基於 Nuxt、Vite 和 Tailwind CSS,為敏捷開發而生的全端專案範本。
+一個基於 Nuxt、Vite 和 Tailwind CSS，為敏捷開發而生的全端專案範本。
 
 A boilerplate for agile full-stack development, powered by Nuxt, Vite, and Tailwind CSS.
 
 ## 系統架構 System Architecture
 
-本專案採用 Nuxt 4 + Vue 3 + Tailwind CSS 打造,使用 Bun 作為開發與編譯工具。
+本專案採用 Nuxt 4 + Vue 3 + Tailwind CSS 打造，使用 Bun 作為開發與編譯工具。
 
 This project is built with Nuxt 4 + Vue 3 + Tailwind CSS, using Bun as the development and build tool.
 
 ### 技術棧 Tech Stack
 
-- **Nuxt 4**: 全端 Vue.js 框架,提供 SSR/SSG 支援
+- **Nuxt 4**: 全端 Vue.js 框架，提供 SSR/SSG 支援
   - Full-stack Vue.js framework with SSR/SSG support
 - **Vue 3**: 使用 Composition API
   - Using Composition API
@@ -49,7 +49,7 @@ bun install
 
 ### 開發除錯模式 Development Mode
 
-該指令會啟動開發除錯模式,可配合瀏覽器進行開發。當網頁變動時,會自動重新載入。
+該指令會啟動開發除錯模式，可配合瀏覽器進行開發。當網頁變動時，會自動重新載入。
 
 This command starts the development server for debugging. It automatically reloads when files change.
 
@@ -59,7 +59,7 @@ bun run dev
 
 ### 正式產品模式 Production Build
 
-該指令會將專案編譯成正式產品模式,壓縮檔案並進行最佳化,最後輸出至 `.output` 目錄。
+該指令會將專案編譯成正式產品模式，壓縮檔案並進行最佳化，最後輸出至 `.output` 目錄。
 
 This command compiles the project for production, compresses files, and optimizes them. The output will be in the `.output` directory.
 
@@ -82,7 +82,7 @@ bun run preview
 ```tree
 ├── app/
 │   ├── app.vue          # 應用程式進入點
-│   ├── assets/          # 靜態資源 (CSS, 圖片等)
+│   ├── assets/          # 靜態資源 (CSS、圖片等)
 │   ├── components/      # Vue 元件
 │   ├── composables/     # Composition API 函式
 │   ├── layouts/         # 佈局模板
@@ -107,7 +107,7 @@ bun run preview
 
 ## 環境變數 Environment Variables
 
-複製 `.env` 檔案並根據需求修改:
+複製 `.env` 檔案並根據需求修改：
 
 Copy the `.env` file and modify it according to your needs:
 
