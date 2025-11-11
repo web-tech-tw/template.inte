@@ -6,19 +6,14 @@
   >
 </template>
 
-<script setup>
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  class: {
-    type: String,
-    required: false,
-    default: () => "",
-  },
-});
+<script setup lang="ts">
+const props = defineProps<{
+  name: string;
+  class?: string;
+}>();
 
-const allIcons = {};
-const resource = allIcons[props.name];
+type IconName = "Unknown";
+
+const allIcons: Record<IconName, string> = {Unknown: ""};
+const resource = allIcons[props.name as IconName];
 </script>

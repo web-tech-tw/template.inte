@@ -1,6 +1,6 @@
 <template>
   <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+    <div class="rounded-lg shadow-lg bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 px-5">
         <div
           class="flex items-center justify-between"
@@ -8,12 +8,12 @@
         >
           <div>
             <h1 class="flex-auto text-lg font-semibold text-gray-900 sm:hidden">
-              {{ title }}
+              {{ label }}
             </h1>
           </div>
-          <div class="-mr-2">
+            <div class="-mr-2">
             <button
-              class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 cursor-pointer"
               type="button"
             >
               <span class="sr-only">Close menu</span>
@@ -27,19 +27,21 @@
               v-for="(item, index) in menuItems"
               :key="index"
             >
-              <app-header-mobile-menu-dropdown
+              <app-header-menu-dropdown
                 v-if="item.type === 'dropdown'"
                 :name="item.name"
                 :children="item.children"
+                variant="mobile"
               />
-              <app-header-mobile-menu-item
+              <app-header-menu-item
                 v-else
                 :name="item.name"
                 :icon="item.icon"
+                variant="mobile"
                 @click="onClickItem(item)"
               />
             </div>
-            <app-header-mobile-menu-sara v-if="isSaraEnabled" />
+            <app-header-menu-sara v-if="isSaraEnabled" variant="mobile" />
           </nav>
         </div>
       </div>
@@ -47,33 +49,36 @@
   </div>
 </template>
 
-<script setup>
-import {inject, watch} from "vue";
+<script setup lang="ts">
+import {inject, watch, type Ref} from "vue";
 
-import AppHeaderMobileMenuItem from "./AppHeaderMobileMenuItem.vue";
-import AppHeaderMobileMenuDropdown from "./AppHeaderMobileMenuDropdown.vue";
-import AppHeaderMobileMenuSara from "./AppHeaderMobileMenuSara.vue";
+import AppHeaderMenuItem from "./AppHeaderMenuItem.vue";
+import AppHeaderMenuDropdown from "./AppHeaderMenuDropdown.vue";
+import AppHeaderMenuSara from "./AppHeaderMenuSara.vue";
 
 import {
-  title,
+  label,
   isSaraEnabled,
   menuItems,
-} from "./AppHeaderMenuData.js";
+  type MenuFunctionItem,
+} from "./AppHeaderMenuData";
 
-const emit = defineEmits(["close"]);
+const emit = defineEmits<{
+  close: [];
+}>();
 
-const parentMenuState = inject("parent-menu-state");
+const parentMenuState = inject<Ref<boolean>>("parent-menu-state")!;
 watch(parentMenuState, (value) => {
   if (!value) {
     emit("close");
   }
 });
 
-const onClickMobileMenuClose = () => {
+const onClickMobileMenuClose = (): void => {
   emit("close");
 };
 
-const onClickItem = (item) => {
+const onClickItem = (item: MenuFunctionItem): void => {
   parentMenuState.value = false;
   item.onClick();
 };

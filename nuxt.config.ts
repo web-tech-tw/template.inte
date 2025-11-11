@@ -1,7 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+
   devtools: { enabled: true },
+  nitro: { preset: 'bun' },
 
   css: ['~/assets/css/main.css'],
   modules: [
@@ -10,5 +12,13 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/ui',
     '@nuxt/test-utils'
-  ]
+  ],
+
+  runtimeConfig: {
+    public: {
+      homeInteHost: 'https://web-tech.tw',
+      saraInteHost: 'https://web-tech.tw/sara',
+      saraTokenName: 'unified_token',
+    }
+  }
 })

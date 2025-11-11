@@ -26,7 +26,14 @@
   </footer>
 </template>
 
-<script setup>
-const homeInteHost = import.meta.env.VITE_HOME_INTE_HOST;
+<script setup lang="ts">
+const {
+  public: publicConfig
+} = useRuntimeConfig();
+
+const {
+  homeInteHost,
+} = publicConfig;
+
 const year = new Date().getFullYear();
 </script>
