@@ -66,22 +66,65 @@ const onClickItem = (item: MenuDropdownChild): void => {
 };
 
 const buttonClass = computed(() => {
-  const base = "text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer";
+  const base = [
+    "text-gray-500",
+    "group",
+    "bg-white",
+    "rounded-md",
+    "inline-flex",
+    "items-center",
+    "text-base",
+    "font-medium",
+    "hover:text-gray-900",
+    "focus:outline-none",
+    "focus:ring-2",
+    "focus:ring-offset-2",
+    "focus:ring-indigo-500",
+    "cursor-pointer",
+  ];
   
   if (props.variant === "mobile") {
-    return `${base} w-full`;
+    return [
+      ...base,
+      "w-full",
+    ];
   }
   
-  return `h-8 ${base}`;
+  return [
+    "h-8",
+    ...base,
+  ];
 });
 
 const dropdownContainerClass = computed(() => {
-  const base = "absolute z-10 mt-3 transform px-2 w-screen max-w-md sm:px-0";
+  const base = [
+    "absolute",
+    "z-10",
+    "mt-3",
+    "transform",
+    "px-2",
+    "w-screen",
+    "max-w-md",
+    "sm:px-0",
+  ];
   
   if (props.variant === "mobile") {
-    return `${base} -ml-7 sm:-ml-4 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`;
+    return [
+      ...base,
+      "-ml-7",
+      "sm:-ml-4",
+      "lg:ml-0",
+      "lg:left-1/2",
+      "lg:-translate-x-1/2",
+    ];
   }
   
-  return `${base} -ml-4 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2`;
+  return [
+    ...base,
+    "-ml-4",
+    "lg:ml-0",
+    "lg:left-1/2",
+    "lg:-translate-x-1/2",
+  ];
 });
 </script>

@@ -49,11 +49,17 @@ const identicon = computed(() => {
   return `https://api.gravatar.com/avatar/${avatarHash}?d=identicon`;
 });
 
-const avatarClass = computed(() => {
-  return props.variant === "mobile" 
-    ? "rounded-full w-6 h-6 mr-4" 
-    : "rounded-full w-8 h-8 mr-2";
-});
+const isMobile = computed(() => props.variant === "mobile");
+
+const avatarClass = computed(() => ({
+  "rounded-full": true,
+  "w-6": isMobile.value,
+  "h-6": isMobile.value,
+  "mr-4": isMobile.value,
+  "w-8": !isMobile.value,
+  "h-8": !isMobile.value,
+  "mr-2": !isMobile.value,
+}));
 
 const onClick = (): void => {
   onClickSara(profile);
