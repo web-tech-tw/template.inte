@@ -52,16 +52,12 @@
 <script setup lang="ts">
 import {inject, watch, type Ref} from "vue";
 
-import AppHeaderMenuItem from "./AppHeaderMenuItem.vue";
-import AppHeaderMenuDropdown from "./AppHeaderMenuDropdown.vue";
-import AppHeaderMenuSara from "./AppHeaderMenuSara.vue";
-
 import {
   label,
   isSaraEnabled,
   menuItems,
   type MenuFunctionItem,
-} from "./AppHeaderMenuData";
+} from "../data/AppHeaderMenuData";
 
 const emit = defineEmits<{
   close: [];

@@ -35,8 +35,9 @@
 <script setup lang="ts">
 import {ref, inject, watch, computed, type Ref} from "vue";
 
-import AppHeaderMenuDropdownItem from "./AppHeaderMenuDropdownItem.vue";
-import type {MenuDropdownChild} from "./AppHeaderMenuData";
+import type {
+  MenuDropdownChild,
+} from "../data/AppHeaderMenuData";
 
 const props = defineProps<{
   name: string;

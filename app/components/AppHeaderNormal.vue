@@ -24,15 +24,11 @@
 <script setup lang="ts">
 import {inject, type Ref} from "vue";
 
-import AppHeaderMenuItem from "./AppHeaderMenuItem.vue";
-import AppHeaderMenuDropdown from "./AppHeaderMenuDropdown.vue";
-import AppHeaderMenuSara from "./AppHeaderMenuSara.vue";
-
 import {
   isSaraEnabled,
   menuItems,
   type MenuFunctionItem,
-} from "./AppHeaderMenuData";
+} from "../data/AppHeaderMenuData";
 
 const parentMenuState = inject<Ref<boolean>>("parent-menu-state")!;
 

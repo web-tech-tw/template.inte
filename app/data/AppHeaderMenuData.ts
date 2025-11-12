@@ -42,16 +42,10 @@ export const menuItems: MenuItem[] = [
     status: "template",
     children: [
       {
-        name: "template.inte",
-        description: "前端 Web 通用模板",
+        name: "Wings 系統",
+        description: "Web 系統通用開發模板",
         icon: "GlobeAltIcon",
-        onClick: () => window.open("https://github.com/web-tech-tw/template.inte"),
-      },
-      {
-        name: "template.recv",
-        description: "後端 API 通用模板",
-        icon: "ServerStackIcon",
-        onClick: () => window.open("https://github.com/web-tech-tw/template.recv"),
+        onClick: () => window.open("https://github.com/web-tech-tw/wings"),
       },
     ],
   },
