@@ -26,8 +26,6 @@
 
 <script setup lang="ts">
 import {computed} from "vue";
-import DynamicHeroIcon from "./DynamicHeroIcon.vue";
-import DynamicImageIcon from "./DynamicImageIcon.vue";
 
 const props = defineProps<{
   name: string;

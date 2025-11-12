@@ -25,9 +25,9 @@
 <script setup lang="ts">
 import {computed} from "vue";
 
-import AppHeaderMenuItem from "./AppHeaderMenuItem.vue";
-
-import {onClickSara} from "./AppHeaderMenuData";
+import {
+  onClickSara,
+} from "../data/AppHeaderMenuData";
 
 const props = defineProps<{
   variant?: "mobile" | "normal";

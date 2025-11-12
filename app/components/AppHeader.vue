@@ -44,10 +44,7 @@ import {
   label,
   isSaraEnabled,
   menuItems,
-} from "./AppHeaderMenuData";
-
-import AppHeaderNormal from "./AppHeaderNormal.vue";
-import AppHeaderMobile from "./AppHeaderMobile.vue";
+} from "../data/AppHeaderMenuData";
 
 const isMobileMenuOpened = ref(false);
 
