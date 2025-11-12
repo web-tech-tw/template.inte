@@ -1,3 +1,6 @@
 export default defineEventHandler(
-  () => new Response(useCat(), { status: 418 }),
+  () => useCat({
+    status: 404,
+    message: 'Resource not exists.',
+  }),
 );

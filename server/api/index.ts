@@ -1,3 +1,3 @@
 export default defineEventHandler(
-  () => new Response(useCat(), { status: 418 }),
+  () => useCat({ status: 418 })
 );

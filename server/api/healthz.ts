@@ -1,3 +1,6 @@
 export default defineEventHandler(
-  () => new Response(useCat(), { status: 200 }),
+  () => useCat({
+    status: 200,
+    message: 'Ping? Pong!',
+  })
 );
