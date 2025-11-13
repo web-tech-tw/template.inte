@@ -1,3 +1,5 @@
+# Wings Dockerfile
+# Bun based multi-stage build for Nuxt 4 application
 
 FROM oven/bun:alpine AS factory
 WORKDIR /app
