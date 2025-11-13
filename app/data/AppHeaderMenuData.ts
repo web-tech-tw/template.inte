@@ -7,8 +7,13 @@ export const label = "Web-Tech-TW";
 export const isSaraEnabled = true;
 export const onClickSara = (_profile: UserProfile | null = null): void => {
   const {
-    VITE_SARA_INTE_HOST: saraInteHost,
-  } = import.meta.env;
+    public: publicConfig,
+  } = useRuntimeConfig();
+
+  const {
+    saraInteHost,
+  } = publicConfig;
+
   location.assign(saraInteHost);
 };
 
