@@ -12,7 +12,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   nitro: { preset: 'bun' },
 
+  colorMode: { preference: 'light' },
   css: ['~/assets/css/main.css'],
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/image',
